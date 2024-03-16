@@ -19,7 +19,7 @@ export const HomeCardsInfo: CardInfo[] = [
       "I'm a student at the Federal Institute of Sao Paulo, majoring in Systems Analysis and Development.",
     ],
     image: {
-      src: "/images/home-imege-first.jpg",
+      src: `${import.meta.env.DEV ? "/" : "/araujodanilo-react"}/images/home-imege-first.jpg`,
       alt: "Home Image",
       caption: (
         <>
@@ -48,7 +48,7 @@ export const HomeCardsInfo: CardInfo[] = [
       "I am currently a Frontend Developer intern at Biotronica using ReactJS.",
     ],
     image: {
-      src: "/images/home-image-react.jpg",
+      src: `${import.meta.env.DEV ? "/" : "/araujodanilo-react"}/images/home-image-react.jpg`,
       alt: "Home Image",
       caption: (
         <>
