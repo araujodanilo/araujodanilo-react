@@ -9,7 +9,7 @@ import { NavLinks } from "../../../constants/nav-links";
 export function NavbarCompoent() {
   const { pathname } = useLocation();
 
-  const [navbarOpen, dispatch] = useReducer(navbarReducer, true);
+  const [navbarOpen, dispatch] = useReducer(navbarReducer, false);
 
   const handleToogle = () => {
     dispatch({ type: NavbarActionType.TOGGLE });
@@ -20,14 +20,14 @@ export function NavbarCompoent() {
   }, [pathname]);
 
   return (
-    <nav className="flex flex-col md:flex-row justify-between w-full items-center">
+    <nav className="flex flex-col md:flex-row justify-between items-center md:w-9/12 mx-auto">
       <div className=" flex flex-row gap-5 items-center select-none w-full justify-center md:justify-start">
         <img
           src="https://github.com/araujodanilo.png"
           alt="Logo"
           className="size-8 rounded-md overflow-hidden bg-cover"
         />
-        <span className="font-bold text-lg transform-none">Araujo Danilo</span>
+        <span className="font-bold text-base md:text-lg text-nowrap">Araujo Danilo</span>
         <Menu
           onClick={handleToogle}
           className={`${
@@ -47,8 +47,8 @@ export function NavbarCompoent() {
             key={link.path}
             className={`${
               pathname === link.path
-                ? "text-yellow-600 dark:text-violet-500"
-                : "hover:text-yellow-600/75 dark:hover:text-violet-500/75"
+                ? "text-sky-600 dark:text-violet-500"
+                : "hover:text-sky-600/75 dark:hover:text-violet-500/75"
             } text-lg font-semibold md:w-auto text-center w-full hover:transition-colors hover:duration-300`}
           >
             <Link to={link.path}>{link.name}</Link>
