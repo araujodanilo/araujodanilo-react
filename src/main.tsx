@@ -1,11 +1,17 @@
 import "./index.css";
 
 import { AppRoutes } from "./routes";
+import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "./contexts/theme-provider";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <AppRoutes />
+    <ThemeProvider defaultTheme="system">
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
