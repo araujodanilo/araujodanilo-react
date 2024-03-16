@@ -41,7 +41,7 @@ export function ThemeProvider({ children, defaultTheme, storageKey = "theme" }: 
   const changeTheme = () => {
     dispatch({ type: SwitchThemeActionType.CHANGE });
     // const newTheme = theme === "system" ? "dark" : theme === "dark" ? "light" : "system";
-    const newTheme = theme === "system" ? "dark" : theme === "dark" ? "light" : "light";
+    const newTheme = theme === "system" ? "dark" : theme === "dark" ? "light" : "dark";
     localStorage.setItem(storageKey, newTheme);
   };
 
