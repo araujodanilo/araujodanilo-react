@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom";
 
 export function Layout() {
   return (
-    <div className="bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 py-5 px-2 space-y-4 transition-colors duration-200 w-screen min-h-screen h-screen">
+    <div className="space-y-4 min-h-screen flex flex-col py-4 px-4 mx-auto w-full">
       <HeaderComponent />
-      <main className="bg-zinc-300/75 dark:bg-zinc-800/25 rounded-md py-5 px-5">
+      <main className="flex-1 pt-5">
         <Outlet />
       </main>
       <FooterComponent />
