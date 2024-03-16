@@ -7,12 +7,12 @@ export function ChangeThemeSwitch() {
 
   return (
     <>
-      <span className="md:mr-5 my-auto  bg-zinc-100/50 dark:bg-zinc-800 p-1 rounded-full">
-        {theme === "system" && (
+      <span className="md:mr-5 my-auto hover:bg-zinc-50 dark:bg-zinc-800 hover:dark:bg-zinc-900 p-1 rounded-full transition-colors duration-200">
+        {/* {theme === "system" && (
           <SunMoon className="size-6 stroke-yellow-600 dark:stroke-violet-500" onClick={changeTheme} />
-        )}
-        {theme === "dark" && <Moon className="size-6  dark:stroke-violet-500" onClick={changeTheme} />}
-        {theme === "light" && <Sun className="size-6 stroke-yellow-600" onClick={changeTheme} />}
+        )} */}
+        {theme === "dark" && <Moon className="size-6" onClick={changeTheme} />}
+        {theme === "light" && <Sun className="size-6" onClick={changeTheme} />}
       </span>
     </>
   );
