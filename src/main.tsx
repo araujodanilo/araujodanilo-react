@@ -9,7 +9,7 @@ import { ThemeProvider } from "./contexts/theme-provider";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider defaultTheme="system">
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.DEV ? "/" : "/araujodanilo-react/"}>
         <AppRoutes />
       </BrowserRouter>
     </ThemeProvider>
